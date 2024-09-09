@@ -25,6 +25,13 @@ class Principal extends ControllerApiBase {
         
         echo "<pre>" . print_r($aDados, true) ."</pre>";
     }
+
+    public function atualizaSistema() {
+        $sSql = "UPDATE sistema set sisnome = 'TESTE' where SISCODIGO = 1";
+
+        // Executa a query de UPDATE
+        $this->getQuery()->query($sSql);
+    }
 }
 
 new Principal();
